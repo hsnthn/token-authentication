@@ -32,8 +32,8 @@ app.get('/setup', function(req, res) {
 
 	// create a sample user
 	var nick = new User({ 
-		name: 'Nick Cerminara', 
-		password: 'password',
+		name: 'Hasan Tahan', 
+		password: 'elpsycongroo',
 		admin: true 
 	});
 	nick.save(function(err) {
@@ -42,6 +42,19 @@ app.get('/setup', function(req, res) {
 		console.log('User saved successfully');
 		res.json({ success: true });
 	});
+// create a sample user
+        var second_nick = new User({
+                name: 'Mehmet Ali Gozaydin',
+                password: 'elpsycongroo',
+                admin: true
+        });
+        second_nick.save(function(err) {
+                if (err) throw err;
+
+                console.log('User saved successfully');
+                res.json({ success: true });
+        });
+
 });
 
 // basic route (http://localhost:8080)
